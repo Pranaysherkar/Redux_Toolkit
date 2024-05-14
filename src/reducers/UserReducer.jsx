@@ -244,6 +244,7 @@ export const UserSlice = createSlice({
     state.users.push(action.payload)
     },
     userupdate:(state,action)=>{
+      // console.log(action.payload.id);
         const {id,edit_name}= action.payload;
         const userIndex = state.users.findIndex((user)=> user.id === id );
         if (userIndex!== -1) {
